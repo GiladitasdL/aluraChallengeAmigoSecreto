@@ -55,3 +55,9 @@ function sortearAmigo() {
     let resultado = document.getElementById("resultadoSorteo");
     resultado.innerHTML = `<strong>El amigo secreto es: ${amigoSorteado} 🎉</strong>`;
 }
+// Detectar cuando el usuario presiona "Enter" en el campo de entrada
+document.getElementById("nombreAmigo").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        agregarAmigo(); // Llamar a la función que añade amigos
+    }
+});
