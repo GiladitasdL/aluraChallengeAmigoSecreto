@@ -30,7 +30,7 @@ function mostrarListaAmigos() {
     // Limpiar la lista antes de agregar nuevos elementos
     //    lista.innerHTML = "";
 
-    // Iterar sobre el array amigos y agregar cada nombre a la lista
+    // Recorrer el array amigos y agregar cada nombre a la lista
     for (let i = 0; i < amigos.length; i++) {
         let li = document.createElement("li"); // Crear un elemento <li>
         li.textContent = amigos[i]; // Asignar el nombre del amigo al <li>
@@ -38,3 +38,20 @@ function mostrarListaAmigos() {
     }
 }
 
+function sortearAmigo() {
+    // Validar que haya amigos en la lista
+    if (amigos.length === 0) {
+        alert("Agrega al menos un amigo antes de sortear.");
+        return;
+    }
+
+    // Generar un índice aleatorio
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    // Obtener el nombre sorteado
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    // Mostrar el resultado en el HTML
+    let resultado = document.getElementById("resultadoSorteo");
+    resultado.innerHTML = `<strong>El amigo secreto es: ${amigoSorteado} 🎉</strong>`;
+}
