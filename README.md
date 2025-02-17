@@ -1,13 +1,16 @@
-<em> # Challenge Alura Amigo Secreto </em>
+<em> Challenge Alura Amigo Secreto </em>
 
 Este proyecto es una aplicación web simple que permite a los usuarios ingresar nombres en una lista y realizar un sorteo aleatorio para determinar quién será el "amigo secreto".
-Tecnologías utilizadas:
-HTML
 
-CSS
+<h1>Tecnologías utilizadas:</h1>
 
-JavaScript
-Instalación y uso
+[HTML](HTML)
+
+[CSS](CSS)
+
+[JavaScript](JavaScript)
+
+<em> Instalación y uso </em>
 
 Clona este repositorio:
 
