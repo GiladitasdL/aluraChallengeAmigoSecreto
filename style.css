@@ -38,6 +38,12 @@ body {
     align-items: center;
     padding: 40px 0 0;
 }
+.header-banner img{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Sección de entrada */
 .input-section {
@@ -128,17 +134,31 @@ button {
 /* Listas */
 ul {
     list-style-type: none;
-    color: var(--color-text);
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    
 }
 
+.name-list li {
+    width: 100px;
+    border-radius: 25px 25px 25px 0;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+
 .result-list {
-    margin-top: 15px;
-    color: #05DF05;
+    width: 50%;
+    border-radius: 25px 25px 25px 25px;
+    padding: 10px;
+    margin-top: 20px;
+    color: var(--color-white);
     font-size: 22px;
     font-weight: bold;
+    background-color: var(--color-primary);
     text-align: center;
 }
 

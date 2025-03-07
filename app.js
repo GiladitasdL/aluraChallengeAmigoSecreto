@@ -13,7 +13,7 @@ function agregarAmigo() {
         return;
     }
 
-    // Si el valor es válido, añadirlo al arreglo
+    // Si el valor es válido, añadirlo al arreglo. No utiliza el .value porque lo usa antes
     amigos.push(nombre);
 
     // Restablece el campo de texto a una cadena vacía.
@@ -32,7 +32,7 @@ function mostrarListaAmigos() {
 
     // Recorrer el array amigos y agregar cada nombre a la lista
     for (let i = 0; i < amigos.length; i++) {
-        let li = document.createElement("li"); // Crear un elemento <li>
+        let li = document.createElement("li"); // Crear un elemento <li> (Buena practica)
         li.textContent = amigos[i]; // Asignar el nombre del amigo al <li>
         lista.appendChild(li); // Agregar el <li> a la lista
     }
@@ -52,12 +52,19 @@ function sortearAmigo() {
     let amigoSorteado = amigos[indiceAleatorio];
 
     // Mostrar el resultado en el HTML
+    
     let resultado = document.getElementById("resultadoSorteo");
+
     resultado.innerHTML = `<strong>El amigo secreto es: ${amigoSorteado} 🎉</strong>`;
+    resultado.style.display = "block";
 }
+
 // Detectar cuando el usuario presiona "Enter" en el campo de entrada
 document.getElementById("nombreAmigo").addEventListener("keydown", function (event) {
+    
     if (event.key === "Enter") {
         agregarAmigo(); // Llamar a la función que añade amigos
     }
 });
+
+ 
