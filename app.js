@@ -1,5 +1,6 @@
 //Array para almacenar los nombres
 let amigos = [];
+document.getElementById("resultadoSorteo").style.visibility = "hidden"; 
 
 // Función para agregar amigos a la lista
 function agregarAmigo() {
@@ -36,9 +37,11 @@ function mostrarListaAmigos() {
         li.textContent = amigos[i]; // Asignar el nombre del amigo al <li>
         lista.appendChild(li); // Agregar el <li> a la lista
     }
+    
 }
 
 function sortearAmigo() {
+    
     // Validar que haya amigos en la lista
     if (amigos.length === 0) {
         alert("Agrega al menos un amigo antes de sortear.");
@@ -52,16 +55,16 @@ function sortearAmigo() {
     let amigoSorteado = amigos[indiceAleatorio];
 
     // Mostrar el resultado en el HTML
-    
+    document.getElementById("resultadoSorteo").style.visibility = "visible"; 
+
     let resultado = document.getElementById("resultadoSorteo");
 
     resultado.innerHTML = `<strong>El amigo secreto es: ${amigoSorteado} 🎉</strong>`;
-    resultado.style.display = "block";
+    
 }
 
 // Detectar cuando el usuario presiona "Enter" en el campo de entrada
 document.getElementById("nombreAmigo").addEventListener("keydown", function (event) {
-    
     if (event.key === "Enter") {
         agregarAmigo(); // Llamar a la función que añade amigos
     }
